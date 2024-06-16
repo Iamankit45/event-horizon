@@ -5,6 +5,9 @@ import { Button } from '@/components/ui/button'
 import Collection from '@/components/shared/Collection'
 import { getAllEvents } from '@/lib/actions/event.actions';
 import { SearchParamProps } from '@/types';
+import Search from '@/components/shared/Search';
+import CategoryFilter from '@/components/shared/CategoryFilter';
+
 
 export default async function Home ({ searchParams }: SearchParamProps) {
 
@@ -42,6 +45,14 @@ export default async function Home ({ searchParams }: SearchParamProps) {
             className="max-h-[70vh] object-contain object-center 2xl:max-h-[50vh]"
           />
         </div>
+        </section> 
+        <section id="events" className="wrapper my-8 flex flex-col gap-8 md:gap-12">
+        <h2 className="h2-bold">Trust by <br /> Thousands of Events</h2>
+        <div className="flex w-full flex-col gap-5 md:flex-row">
+          <Search />
+          <CategoryFilter />
+         
+        </div>
         <Collection 
           data={events?.data}
           emptyTitle="No Events Found"
@@ -51,7 +62,8 @@ export default async function Home ({ searchParams }: SearchParamProps) {
           page={1}
           totalPages={2}
         />
-      </section> 
+        </section>
+     
       </>
   )
 }
