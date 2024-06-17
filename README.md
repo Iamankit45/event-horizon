@@ -65,7 +65,7 @@ git clone https://github.com/Iamankit45/event-horizon.git
 Go to the project directory
 
 ```bash
-cd HostelhubPlus
+cd eventhorizon
 ```
 
 Install dependencies
@@ -117,6 +117,6 @@ NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=
 
 [![Screenshot-2024-06-18-at-2-20-54-AM.png](https://i.postimg.cc/4yWWbGQS/Screenshot-2024-06-18-at-2-20-54-AM.png)](https://postimg.cc/rRtGMvb1)
 
-[![Screenshot-2024-06-18-at-2-38-57-AM.png](https://i.postimg.cc/fRGBvBYD/Screenshot-2024-06-18-at-2-38-57-AM.png)](https://postimg.cc/XrgfjK2z)
+[![Screenshot-2024-06-18-at-2-53-37-AM.png](https://i.postimg.cc/mkcJphpH/Screenshot-2024-06-18-at-2-53-37-AM.png)](https://postimg.cc/RJBgNCBS)
 
 
