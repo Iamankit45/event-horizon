@@ -9,7 +9,7 @@ import Search from '@/components/shared/Search';
 import CategoryFilter from '@/components/shared/CategoryFilter';
 
 
-export default async function Home ({ searchParams }: SearchParamProps) {
+export default async function Home({ searchParams }: SearchParamProps) {
 
   const page = Number(searchParams?.page) || 1;
   const searchText = (searchParams?.query as string) || '';
@@ -22,49 +22,58 @@ export default async function Home ({ searchParams }: SearchParamProps) {
     limit: 6
   })
 
- 
+
   return (
     <>
-    <section className="bg-primary-50 bg-dotted-pattern bg-contain py-5 md:py-10">
-        <div className="wrapper grid grid-cols-1 gap-5 md:grid-cols-2 2xl:gap-0">
-          <div className="flex flex-col justify-center gap-8">
-            <h1 className="h1-bold">Host, Connect, Celebrate: Your Events, Our Platform!</h1>
-            <p className="p-regular-20 md:p-regular-24">Book and learn helpful tips from 3,168+ mentors in world-class companies with our global community.</p>
-            <Button size="lg" asChild className="button w-full sm:w-fit">
-              <Link href="#events">
-                Explore Now
-              </Link>
-            </Button>
-          </div>
+      <div className="bg-gradient-to-r from-indigo-200  via-purple-200 to-pink-300">
+        <section className="bg-contain py-5 md:py-10">
+          <div className="wrapper grid grid-cols-1 gap-5 md:grid-cols-2 2xl:gap-0">
 
-          <Image 
-            src="/assets/images/hero.png"
-            alt="hero"
-            width={1000}
-            height={1000}
-            className="max-h-[70vh] object-contain object-center 2xl:max-h-[50vh]"
-          />
-        </div>
-        </section> 
-        <section id="events" className="wrapper my-8 flex flex-col gap-8 md:gap-12">
-        <h2 className="h2-bold">Trust by <br /> Thousands of Events</h2>
-        <div className="flex w-full flex-col gap-5 md:flex-row">
-          <Search />
-          <CategoryFilter />
-         
-        </div>
-        <Collection 
-          data={events?.data}
-          emptyTitle="No Events Found"
-          emptyStateSubtext="Come back later"
-          collectionType="All_Events"
-          limit={6}
-          page={page}
-          totalPages={events?.totalPages}
-        />
+            <Image
+              src="/assets/images/hero3.png"
+              alt="hero"
+              width={1000}
+              height={1000}
+              className="max-h-[70vh] object-contain object-center 2xl:max-h-[50vh]"
+            />
+
+            <div className="flex flex-col justify-center gap-8">
+
+              <h1 className="h1-bold">Create, Connect , Enjoy   : Your Event Journey Starts Here!</h1>
+              {/* <h1 className="h1-bold">Enjoy: Your Event Journey Starts Here!</h1> */}
+              {/* <h1 className="h1-bold">Host, Connect, Celebrate: Your Events, Our Platform!</h1> */}
+              <p className="p-regular-20 md:p-regular-24">Discover and gain valuable insights from 3,168+ experts in top-tier companies through our global network.</p>
+              <Button size="lg" asChild className="button w-full sm:w-fit">
+                <Link href="#events">
+                  Explore Now
+                </Link>
+              </Button>
+            </div>
+
+
+
+          </div>
         </section>
-     
-      </>
+        <section id="events" className="wrapper mt-8 flex flex-col gap-8 md:gap-12 ">
+          <h2 className="h2-bold ">Trust by <br /> Thousands of Events</h2>
+          <div className="flex w-full flex-col gap-5 md:flex-row">
+            <Search />
+            <CategoryFilter />
+
+          </div>
+          <Collection
+            data={events?.data}
+            emptyTitle="No Events Found"
+            emptyStateSubtext="Come back later"
+            collectionType="All_Events"
+            limit={6}
+            page={page}
+            totalPages={events?.totalPages}
+          />
+        </section>
+      </div>
+
+    </>
   )
 }
 
